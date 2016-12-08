@@ -17,7 +17,7 @@ var MAX_FILES = 1024
 var fileSemaphore = make(chan bool, MAX_FILES)
 
 func main() {
-	files, err := filepath.Glob("*" + fileExtension)
+	files, err := filepath.Glob("data/*" + fileExtension)
 	if err != nil {
 		panic(err)
 	}
